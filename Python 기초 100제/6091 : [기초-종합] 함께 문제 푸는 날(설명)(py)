@@ -1,0 +1,12 @@
+def GCD(n1, n2):
+  if n2 == 0:
+    return n1
+  else:
+    return GCD(n2, n1%n2)
+
+a, b, c = map(int, input().split())
+
+d = a * b // GCD(a, b)
+answer = d * c // GCD(d, c)
+
+print(answer)
