@@ -1,0 +1,11 @@
+n = int(input())
+s = 0
+t = 1
+
+while True:
+  s += t
+  t += 1
+  if s >= n:
+    break
+
+print(s)
