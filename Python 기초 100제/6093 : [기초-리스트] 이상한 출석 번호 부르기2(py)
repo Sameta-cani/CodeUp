@@ -1,0 +1,4 @@
+n = int(input()) # 번호를 부른 횟수 입력
+attends = list(map(int, input().split())) # 랜덤 번호 입력
+
+print(*attends[::-1]) # 출력
