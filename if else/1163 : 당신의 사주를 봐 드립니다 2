@@ -1,0 +1,5 @@
+year, month, day = map(int, input().split())
+
+cond = (year + month + day) % 1000 // 100
+
+print("그럭저럭" if cond % 2 == 1 else "대박")
