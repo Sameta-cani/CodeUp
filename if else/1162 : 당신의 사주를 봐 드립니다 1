@@ -1,0 +1,5 @@
+year, month, day = map(int, input().split())
+
+cond = (year - month + day) % 10
+
+print("그럭저럭" if cond else "대박")
