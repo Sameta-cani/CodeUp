@@ -1,0 +1,3 @@
+n = int(input())
+
+print("oh my god" if n % 2 == 1 else "enjoy")
