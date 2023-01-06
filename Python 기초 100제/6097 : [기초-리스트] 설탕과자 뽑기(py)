@@ -1,0 +1,21 @@
+# 격자판의 세로(h), 가로(w) 입력
+h, w = map(int, input().split())
+# 해당 격자판 초기화
+boards = [[0] * w for _ in range(h)]
+
+# 막대의 개수(n) 입력
+n = int(input())
+
+for _ in range(n):
+  l, d, x, y = map(int, input().split()) # 막대의 길이(l), 방향(d), 좌표(x, y) 입력
+  if d == 1: # 세로 방향
+    for i in range(l):
+      boards[x+i-1][y-1] = 1
+  else: # 가로 방향
+    for i in range(l):
+      boards[x-1][y+i-1] = 1
+
+for i in range(h):
+  for j in range(w):
+    print(boards[i][j], end=' ')
+  print()
