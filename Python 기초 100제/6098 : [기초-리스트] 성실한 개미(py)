@@ -1,0 +1,31 @@
+# 미로 입력
+boards = [list(map(int, input().split())) for _ in range(10)]
+
+# 개미의 위치
+x, y = 1, 1
+boards[x][y] = 9
+
+while True:
+  if boards[x][y+1] == 0: # 오른쪽이 길이라면 이동
+    y += 1 
+    boards[x][y] = 9
+  elif boards[x][y+1] == 1: # 오른쪽이 막혀있다면
+    if boards[x+1][y] == 0: # 아래쪽이 길이라면 이동
+      x += 1
+      boards[x][y] = 9
+    elif boards[x+1][y] == 1: # 아래쪽도 막혀있다면 실패
+      break
+    elif boards[x+1][y] == 2: # 아래쪽에 먹이가 있다면 성공
+      x += 1
+      boards[x][y] = 9
+      break
+  elif boards[x][y+1] == 2: # 오른쪽에 먹이가 있다면 성공
+    y += 1
+    boards[x][y] = 9
+    break
+    
+# 출력
+for i in range(10):
+  for j in range(10):
+    print(boards[i][j], end=' ')
+  print()
