@@ -1,0 +1,3 @@
+f = float(input())
+
+print("win" if 50 <= f <= 60 else "lose")
