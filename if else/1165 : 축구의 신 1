@@ -1,0 +1,5 @@
+time, score = map(int, input().split())
+
+score += (89 - time) // 5 + 1
+
+print(score)
