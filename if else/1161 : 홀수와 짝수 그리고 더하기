@@ -1,0 +1,9 @@
+def oe(n):
+  if n % 2 == 0:
+    return "짝수"
+  else:
+    return "홀수"
+
+a, b = map(int, input().split())
+
+print("%s+%s=%s" %(oe(a), oe(b), oe(a+b)))
