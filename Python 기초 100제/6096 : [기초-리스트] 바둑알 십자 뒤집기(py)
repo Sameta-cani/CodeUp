@@ -1,0 +1,18 @@
+# 입력받은 바둑판 저장
+boards = [list(map(int, input().split())) for _ in range(19)]
+# 입력받을 좌표의 개수
+n = int(input())
+
+# 십자 뒤집기
+for i in range(n):
+  x, y = map(int, input().split()) # 좌표 입력
+  for j in range(1, 20): # 가로 뒤집기
+    boards[j-1][y-1] = int(not boards[j-1][y-1])
+  for j in range(1, 20): # 세로 뒤집기
+    boards[x-1][j-1] = int(not boards[x-1][j-1])
+
+# 출력
+for i in range(len(boards)):
+  for j in range(len(boards[0])):
+    print(boards[i][j], end=' ')
+  print()
