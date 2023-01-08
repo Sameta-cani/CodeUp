@@ -1,0 +1,7 @@
+menu = [400, 340, 170, 100, 70]
+
+m1, m2 = map(int, input().split())
+
+tot = menu[m1-1] + menu[m2-1]
+
+print("angry" if tot > 500 else "no angry")
