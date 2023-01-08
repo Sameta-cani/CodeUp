@@ -1,0 +1,12 @@
+cond = sum(list(map(int, input().split())))
+
+if cond == 0:
+  print('모')
+elif cond == 1:
+  print('도')
+elif cond == 2:
+  print('개')
+elif cond == 3:
+  print('걸')
+elif cond == 4:
+  print('윷')
