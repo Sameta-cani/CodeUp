@@ -1,0 +1,3 @@
+g, c, n = map(int, input().split())
+
+print(g * 1000 + c * 100 + n)
