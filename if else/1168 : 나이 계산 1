@@ -1,0 +1,8 @@
+birth, cond = map(int, input().split())
+
+if cond <= 2:
+  age = 2013- (birth // 10000 + 1900)
+else:
+  age = 2013 - (birth // 10000 + 2000)
+
+print(age)
