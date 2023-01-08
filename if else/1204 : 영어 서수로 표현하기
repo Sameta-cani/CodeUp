@@ -1,0 +1,14 @@
+n = int(input())
+
+if n % 10 in (1, 2, 3):
+  if n in (11, 12, 13):
+    print('%dth' % n)
+  else:
+    if n % 10 == 1:
+      print('%dst' % n)
+    elif n % 10 == 2:
+      print('%dnd' % n)
+    else:
+      print('%drd' % n)
+else:
+  print('%dth' % n)
