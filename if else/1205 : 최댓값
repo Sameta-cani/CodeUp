@@ -1,0 +1,23 @@
+import heapq
+
+def heapsort(iterable):
+  h = []
+  result = []
+  for value in iterable:
+    heapq.heappush(h, value)
+  for _ in range(len(h)):
+    result.append(heapq.heappop(h))
+  return result
+
+a, b = map(float, input().split())
+arr = list()
+
+arr.append(a + b)
+arr.append(abs(a - b))
+arr.append(a * b)
+arr.append(a / b)
+arr.append(b / a)
+arr.append(a**b)
+arr.append(b**a)
+
+print('%.6f' % heapsort(arr)[-1])
