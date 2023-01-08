@@ -1,0 +1,6 @@
+age = 2013 - int(input())
+
+if age >= 2000:
+  print(age % 100, 3)
+else:
+  print(age % 100, 1)
