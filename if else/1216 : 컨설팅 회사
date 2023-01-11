@@ -1,0 +1,10 @@
+n1, n2, n3 = map(int, input().split())
+
+cond = n1 - (n2 - n3)
+
+if cond > 0:
+  print("do not advertise")
+elif cond < 0:
+  print("advertise")
+else:
+  print("does not matter")
