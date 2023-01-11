@@ -1,0 +1,18 @@
+import heapq
+
+def heapsort(iterable):
+  h = []
+  result = []
+  for value in iterable:
+    heapq.heappush(h, value)
+  for _ in range(len(h)):
+    result.append(heapq.heappop(h))
+  return result
+
+arr = heapsort(list(map(int, input().split())))
+bigger = arr[-1]
+
+if bigger < arr[0] + arr[1]:
+  print("yes")
+else:
+  print("no")
