@@ -1,0 +1,25 @@
+import heapq
+
+def heapsort(iterable):
+  h = []
+  result = []
+  for value in iterable:
+    heapq.heappush(h, value)
+  for _ in range(len(h)):
+    result.append(heapq.heappop(h))
+  return result
+
+# 크기 순으로 나열
+a, b, c = heapsort(list(map(int, input().split()))) 
+
+if a + b > c:
+  if a == b == c:
+    print('정삼각형')
+  elif a == b or a == c or b == c:
+    print('이등변삼각형')
+  elif a**2 + b**2 == c**2:
+    print('직각삼각형')
+  else:
+    print('삼각형')
+else:
+  print('삼각형아님')
