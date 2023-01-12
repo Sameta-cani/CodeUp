@@ -1,0 +1,13 @@
+ts = list(map(int, input().split()))
+
+base = 170
+is_pass = True
+
+for t in ts:
+  if t <= base:
+    print('CRASH', t)
+    is_pass = False
+    break
+
+if is_pass:
+  print('PASS')
