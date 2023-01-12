@@ -1,0 +1,20 @@
+formal = input()
+
+ops = ['+', '-', '*', '/']
+op = ''
+n1, n2 = 0, 0
+
+for o in ops:
+  if formal.find(o) != -1:
+    op = o
+    n1, n2 = map(int, formal.split(op))
+    break
+
+if op == '+':
+  print(n1 + n2)
+elif op == '-':
+  print(n1 - n2)
+elif op == '*':
+  print(n1 * n2)
+else:
+  print('%.2f' % (n1 / n2))
