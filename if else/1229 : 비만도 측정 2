@@ -1,0 +1,17 @@
+h, w = map(float, input().split())
+
+if h >= 160:
+  BW = (h - 100) * 0.9
+elif h >= 150:
+  BW = (h - 150) / 2 + 50
+else:
+  BW = h - 100
+
+BMI = (w - BW) * 100 / BW
+
+if BMI > 20:
+  print('비만')
+elif BMI > 10:
+  print('과체중')
+else:
+  print('정상')
