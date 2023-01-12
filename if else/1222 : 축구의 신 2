@@ -1,0 +1,10 @@
+time, s1, s2 = map(int, input().split())
+
+total_s1 = s1 + (89 - time) // 5 + 1
+
+if total_s1 > s2:
+  print('win')
+elif total_s1 < s2:
+  print('lose')
+else:
+  print('same')
