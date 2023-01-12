@@ -1,0 +1,23 @@
+lotto = list(map(int, input().split()))
+bonus = lotto[-1]
+
+hav = list(map(int, input().split()))
+cond = 0
+
+for i in hav:
+  if i in lotto[:-1]:
+    cond += 1
+
+if cond == 6:
+  print(1)
+elif cond == 5:
+  if bonus in hav:
+    print(2)
+  else:
+    print(3)
+elif cond == 4:
+  print(4)
+elif cond == 3:
+  print(5)
+else:
+  print(0)
