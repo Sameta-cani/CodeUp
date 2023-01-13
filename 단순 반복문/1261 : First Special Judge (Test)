@@ -1,0 +1,12 @@
+import random
+
+# 10개의 수 입력
+arr = list(map(int, input().split()))
+
+# 5의 배수만을 넣음
+cond = [i for i in arr if i % 5 == 0]
+
+if len(cond) == 0: # 5의 배수가 없다면
+  print(0) # 0을 출력
+else: # 5의 배수가 있다면
+  print(random.choice(cond)) # 5의 배수 중 랜덤 출력
