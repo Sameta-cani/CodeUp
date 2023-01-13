@@ -1,0 +1,4 @@
+start, end = map(ord, input().split())
+
+for c in range(start, end+1):
+  print(chr(c), end=' ')
