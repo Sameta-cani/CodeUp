@@ -1,0 +1,5 @@
+import math
+
+n = math.ceil(int(input()) / 10)
+
+print(n)
