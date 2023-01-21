@@ -1,0 +1,16 @@
+a = int(input()) # 투자한 액수 a 입력
+b = int(input()) # 투자 일 수 b 입력
+arr = list(map(int, input().split())) # b개의 변동폭 데이터 입력
+org = a
+
+for p in arr:
+  a += a * (p/100)
+
+res = round(a - org)
+print(res)
+if res > 0:
+  print('good')
+elif res < 0:
+  print('bad')
+else:
+  print('same')
