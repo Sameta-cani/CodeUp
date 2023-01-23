@@ -1,0 +1,18 @@
+# 소수끼리는 항상 서로소
+N = int(input())
+n = N
+div_set = set()
+d = 2
+
+while N != 1:
+  if N % d != 0:
+    d += 1
+  else:
+    N //= d
+    div_set.add(d)
+
+div_list = list(div_set)
+if len(div_list) == 2 and (div_list[0] * div_list[1]) == n:
+  print(*sorted(div_list))
+else:
+  print("wrong number")
