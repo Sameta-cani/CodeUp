@@ -1,0 +1,19 @@
+import heapq
+
+def heapsort(iterable):
+  h = []
+  result = []
+  for value in iterable:
+    heapq.heappush(h, value)
+  for _ in range(len(h)):
+    result.append(heapq.heappop(h))
+  return result
+
+arr = []
+for _ in range(5):
+  arr.append(int(input()))
+
+arr = heapsort(arr)
+
+print(arr[-1])
+print(arr[0])
