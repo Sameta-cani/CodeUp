@@ -1,0 +1,29 @@
+from collections import deque
+
+# 수식 입력
+f = input()
+# 연산자의 인덱스를 담을 배열
+index = [-1]
+# 식에 등장하는 숫자를 담을 배열
+number = deque([])
+for c in range(len(f)): # 수식을 하나씩 반복하면서
+    if f[c] in ['+', '-', '*', '/', '=']: # 만약 연산자라면
+        index.append(c) # index의 추가
+
+for i in range(len(index)-1): 
+    number.append(int(f[index[i]+1:index[i+1]])) # 수식의 인덱스를 기준으로 숫자를 추출해서 배열에 넣음
+
+# 실제 수식부터 마지막 수식의 인덱스를 거치며 연산    
+# 가장 왼쪽에 있는 수 2개를 추출하여 수식에 맞는 연산을 진행하고
+# 가장 왼쪽에 삽입
+for i in index[1:-1]: 
+    if f[i] == '+': 
+        number.appendleft(number.popleft() + number.popleft())
+    if f[i] == '-':
+        number.appendleft(number.popleft() - number.popleft())
+    if f[i] == '*':
+        number.appendleft(number.popleft() * number.popleft())
+    if f[i] == '/':
+        number.appendleft(number.popleft() // number.popleft())
+
+print(number[0])
