@@ -1,0 +1,7 @@
+P = input()
+
+for c in P:
+  if c != ' ':
+    print(chr((ord(c) - 94) % 26 + 97), end='')
+  else:
+    print(c, end='')
