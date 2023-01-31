@@ -1,0 +1,10 @@
+h, k, d = input().split()
+h, k = map(int, (h, k))
+
+if d == 'L':
+  start, end, step = 0, h, 1
+elif d == 'R':
+  start, end, step = h-1, -1, -1
+
+for i in range(start, end, step):
+  print(' ' * i + '*' * k)
