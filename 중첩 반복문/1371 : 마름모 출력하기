@@ -1,0 +1,12 @@
+n = int(input())
+
+for i in range(2*n):
+  for j in range(1, 2*n+1):
+    # or 기준으로 왼쪽은 우상향 대각선 오른쪽은 좌상향 대각선
+    # and 기준으로 왼쪽은 다이아몬드 선, 오른쪽은 제약사항(전체 대각선 삭제)
+    if ((i+j) % n == 0) and (i+j != 2*n) or ((i-j + 1) % n == 0 and (i+1 != j)):
+      print('*', end='')
+    else:
+      print(' ', end='')
+
+  print()
