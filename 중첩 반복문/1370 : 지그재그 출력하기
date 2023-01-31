@@ -1,0 +1,7 @@
+h, r = map(int, input().split())
+
+for _ in range(r):
+  for i in range(h):
+    print(' '*i + '*')
+  for i in range(h-2, -1, -1):
+    print(' '*i + '*')
