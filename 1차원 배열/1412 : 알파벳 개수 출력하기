@@ -1,0 +1,10 @@
+sen = input()
+
+alpha_count = [0] * 26
+
+for i in range(len(sen)):
+  if 97 <= ord(sen[i]) <= 133:
+    alpha_count[ord(sen[i])-97] += 1
+
+for i in range(len(alpha_count)):
+  print('%s:%d' % (chr(i+97), alpha_count[i]))
