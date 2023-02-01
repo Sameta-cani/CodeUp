@@ -1,0 +1,11 @@
+N = int(input())
+
+cond = [False] * N
+
+for _ in range(N-1):
+  n = int(input())
+  cond[n-1] = True
+
+for i in range(N):
+  if cond[i] == False:
+    print(i+1)
