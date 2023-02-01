@@ -1,0 +1,18 @@
+import heapq
+
+def heapsort(iterable):
+  h = []
+  result = []
+  for value in iterable:
+    heapq.heappush(h, value)
+  for _ in range(len(h)):
+    result.append(heapq.heappop(h))
+  return result
+
+N, C = map(int, input().split())
+st_h = heapsort(list(map(int, input().split())))
+
+for i in range(1, len(st_h)+1):
+  print(st_h[i-1], end=' ')
+  if i % C == 0:
+    print()
