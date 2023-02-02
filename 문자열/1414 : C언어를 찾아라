@@ -1,0 +1,10 @@
+s = input().upper()
+count = 0
+
+print(s.count('C'))
+
+for i in range(len(s)-1):
+  if s[i:i+2] == 'CC':
+    count += 1
+
+print(count)
