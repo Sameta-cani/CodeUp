@@ -1,0 +1,7 @@
+P = input()
+
+for c in P:
+  if c.isupper():
+    print(c.lower(), end='')
+  else:
+    print(c.upper(), end='')
