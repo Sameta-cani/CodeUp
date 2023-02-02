@@ -1,0 +1,6 @@
+a, b = input().split('x')
+b, c = map(int, b.split('='))
+
+result = (c - b) / int(a)
+
+print('%.2f' % result)
