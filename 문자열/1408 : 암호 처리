@@ -1,0 +1,9 @@
+pw = input()
+
+for p in pw:
+  print(chr(ord(p) + 2), end='')
+
+print()
+
+for p in pw:
+  print(chr(ord(p) * 7 % 80 + 48), end='')
