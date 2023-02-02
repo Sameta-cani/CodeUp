@@ -1,0 +1,5 @@
+a, b = map(int, input().split('x'))
+
+result = (0 - b) / a
+
+print('%.2f' % result)
