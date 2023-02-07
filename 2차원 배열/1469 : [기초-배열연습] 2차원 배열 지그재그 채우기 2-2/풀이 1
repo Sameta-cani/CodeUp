@@ -1,0 +1,5 @@
+n = int(input())
+arr = [[n * (r + 1) - c if r % 2 == 0 else n * r + 1 + c for c in range(n)] for r in range(n)]
+
+for i in range(n):
+  print(*arr[i])
