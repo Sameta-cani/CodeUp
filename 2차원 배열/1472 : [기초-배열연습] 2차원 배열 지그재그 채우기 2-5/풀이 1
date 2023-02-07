@@ -1,0 +1,9 @@
+n, m = map(int, input().split())
+
+# 행의 개수(n)이 짝수인 경우와 홀수인 경우로 나눔
+# (n이 짝수이고 짝수인 줄)과 (n이 홀수이고 홀수인 줄)은 정방향 진행
+# (n이 짝수이고 홀수인 줄)과 (n이 홀수이고 짝수인 줄)은 역방향 진행
+arr = [[(((n-1-r)*m+(c+1)) if r % 2 == 0 else ((n-r)*m-c)) if n % 2 == 0 else ((n-r)*m-c) if r % 2 == 0 else (((n-1-r)*m+(c+1))) for c in range(m)] for r in range(n)]
+
+for i in range(n):
+    print(*arr[i])
