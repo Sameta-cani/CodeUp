@@ -1,0 +1,14 @@
+n, m = map(int, input().split())
+arr = [[0] * m for _ in range(n)]
+cnt = 1
+
+for i in range(n+m):
+  for j in range(m):
+    for k in range(n):
+      if i == (j + k):
+        arr[k][m-j-1] = cnt
+        cnt += 1
+        break
+
+for i in range(n):
+  print(*arr[i])
