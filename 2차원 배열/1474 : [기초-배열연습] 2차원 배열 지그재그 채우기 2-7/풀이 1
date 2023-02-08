@@ -1,0 +1,6 @@
+n, m = map(int, input().split())
+arr = [[(n * (m - c - 1) + r + 1 if c % 2 == 0 else n * (m - c) - r) if m % 2 == 0 else 
+        (n * (m - c) - r if c % 2 == 0 else n * (m - c - 1) + r + 1) for c in range(m)] for r in range(n)]
+
+for i in range(n):
+  print(*arr[i])
