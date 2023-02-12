@@ -1,0 +1,24 @@
+n, m = map(int, input().split())
+arr = [[0] * m for _ in range(n)]
+r, c, cnt = -1, m-1, n*m
+r_size, c_size = n, m
+step = 1
+
+while r_size and c_size:
+  for _ in range(r_size):
+    r += step
+    arr[r][c] = cnt
+    cnt -= 1
+
+  c_size -= 1
+  step = -step
+
+  for _ in range(c_size):
+    c += step
+    arr[r][c] = cnt
+    cnt -= 1
+
+  r_size -= 1
+
+for i in range(n):
+  print(*arr[i])
