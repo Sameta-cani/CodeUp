@@ -1,0 +1,20 @@
+n = int(input())
+ms = [[0] * n for _ in range(n)]
+
+ms[0][n//2] = 1
+row, column = n-1, (n//2) + 1
+
+for i in range(2, n*n+1):
+  ms[row][column] = i
+  if i % n == 0:
+    row += 1
+  else:
+    row -= 1
+    column += 1
+    if row < 0:
+      row = n-1
+    if column == n:
+      column = 0
+
+for i in range(n):
+  print(*ms[i])
