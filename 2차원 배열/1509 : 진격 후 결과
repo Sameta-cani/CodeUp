@@ -1,0 +1,21 @@
+arr = [[0] * 10 for _ in range(10)]
+
+for i in range(10):
+  arr[i] = list(map(int, input().split()))
+
+end = list(map(int, input().split()))
+
+for h in range(len(end)):
+  if end[h]:
+    for i in range(9, -1, -1):
+      if arr[i][h] > 0:
+        print(h+1, 'crash')
+        break
+      elif arr[i][h] < 0:
+        print(h+1, 'fall')
+        break
+      else:
+        if i == 0:
+          print(h+1, 'safe')
+  else:
+    continue
