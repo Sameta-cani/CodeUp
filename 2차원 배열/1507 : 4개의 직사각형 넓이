@@ -1,0 +1,13 @@
+plane = [[0] * 100 for _ in range(100)]
+count = 0
+
+for _ in range(4):
+  x1, y1, x2, y2 = map(int, input().split())
+  for y in range(y1, y2):
+    for x in range(x1, x2):
+      plane[y][x] = 1
+
+for i in range(100):
+  count += plane[i].count(1)
+
+print(count)
