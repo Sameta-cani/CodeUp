@@ -1,0 +1,16 @@
+N = int(input()) # N 입력
+X, Y = map(int, input().split()) # 좌표값 입력
+arr = [[0] * N for _ in range(N)] # 배열 초기화
+
+def abs(num): # 입력받은 숫자의 절댓값을 반환하는 함수
+  return num if num > 0 else -num
+
+def get_distance(a, b): 
+  # 좌표값으로부터 떨어진 거리를 계산하여 반환하는 함수
+  # 뒤에 +1은 시작값이 1부터 시작이므로 추가 연산
+  return abs(a - (X - 1)) + abs(b - (Y - 1)) + 1
+
+for i in range(N):
+  for j in range(N):
+    print(get_distance(i, j), end=' ')
+  print()
